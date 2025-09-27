@@ -1,0 +1,17 @@
+# Nixpacks configuration for UCCAI Website
+# This file is used by Coolify for automatic deployment
+
+[phases.setup]
+nixPkgs = ["nodejs_20", "pnpm"]
+
+[phases.install]
+cmds = ["pnpm install --frozen-lockfile"]
+
+[phases.build]
+cmds = ["pnpm run build"]
+
+[start]
+cmd = "npx serve dist -l 3000"
+
+[variables]
+NODE_ENV = "production"
