@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { BookOpen, Heart, Sparkles, ArrowRight } from 'lucide-react'
+import { openWhatsApp } from '@/lib/whatsapp'
 
 const FoundersSection = () => {
   const founders = [
@@ -140,7 +141,10 @@ const FoundersSection = () => {
                 Missão Compartilhada
               </span>
             </div>
-            <Button className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-6 py-3 rounded-full font-semibold">
+            <Button
+              className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-6 py-3 rounded-full font-semibold"
+              onClick={() => openWhatsApp('Olá! Gostaria de conhecer mais sobre a história do UCCAI.')}
+            >
               Conheça Nossa História Completa
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>

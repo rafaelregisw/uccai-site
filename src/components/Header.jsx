@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Menu, X, Sparkles } from 'lucide-react'
+import { openWhatsApp } from '@/lib/whatsapp'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -50,7 +51,10 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <Button className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105">
+            <Button
+              className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105"
+              onClick={() => openWhatsApp('Olá! Gostaria de agendar uma consulta no UCCAI.')}
+            >
               Agende sua Consulta
             </Button>
           </div>
@@ -82,7 +86,10 @@ const Header = () => {
                   {item.label}
                 </a>
               ))}
-              <Button className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-6 py-2 rounded-full mt-4 w-full">
+              <Button
+                className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-6 py-2 rounded-full mt-4 w-full"
+                onClick={() => openWhatsApp('Olá! Gostaria de agendar uma consulta no UCCAI.')}
+              >
                 Agende sua Consulta
               </Button>
             </nav>

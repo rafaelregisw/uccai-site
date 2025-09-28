@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react'
+import { openWhatsApp, WHATSAPP_DISPLAY } from '@/lib/whatsapp'
 
 const ContactSection = () => {
   return (
@@ -55,7 +56,7 @@ const ContactSection = () => {
                 <input
                   type="tel"
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
-                  placeholder="(62) 99999-9999"
+                  placeholder="+55 62 99647-6174"
                 />
               </div>
               
@@ -118,7 +119,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800 mb-1">Telefone</h4>
-                    <p className="text-gray-600">(62) 99999-9999</p>
+                    <p className="text-gray-600">{WHATSAPP_DISPLAY}</p>
                     <p className="text-sm text-gray-500">WhatsApp disponível</p>
                   </div>
                 </div>
@@ -129,7 +130,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800 mb-1">E-mail</h4>
-                    <p className="text-gray-600">contato@uccai.com.br</p>
+                    <p className="text-gray-600">internacional@uccai.com.br</p>
                     <p className="text-sm text-gray-500">Resposta em até 24h</p>
                   </div>
                 </div>
@@ -156,9 +157,10 @@ const ContactSection = () => {
                 Participe das nossas atividades gratuitas de assistência espiritual. 
                 Uma oportunidade de conhecer nosso trabalho e receber orientação inicial.
               </p>
-              <Button 
-                variant="outline" 
-                className="border-2 border-white text-white hover:bg-white hover:text-purple-600 rounded-xl font-semibold"
+              <Button
+                variant="outline"
+                className="border-2 border-purple-300 text-purple-700 hover:bg-purple-50 rounded-xl font-semibold"
+                onClick={() => openWhatsApp('Olá! Gostaria de saber mais sobre a assistência gratuita do UCCAI.')}
               >
                 Saiba Mais sobre Assistência Gratuita
               </Button>

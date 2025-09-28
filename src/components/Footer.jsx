@@ -1,4 +1,5 @@
 import { Sparkles, MapPin, Phone, Mail, Facebook, Youtube, Instagram } from 'lucide-react'
+import { WHATSAPP_DISPLAY } from '@/lib/whatsapp'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -54,11 +55,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-purple-400" />
-                <span className="text-gray-300">(62) 9999-9999</span>
+                <span className="text-gray-300">{WHATSAPP_DISPLAY}</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-purple-400" />
-                <span className="text-gray-300">contato@uccai.com.br</span>
+                <span className="text-gray-300">internacional@uccai.com.br</span>
               </div>
             </div>
           </div>

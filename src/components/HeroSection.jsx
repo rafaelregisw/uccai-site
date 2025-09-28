@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { Sparkles, Star, Heart, Zap } from 'lucide-react'
+import { openWhatsApp } from '@/lib/whatsapp'
 
 const HeroSection = () => {
   return (
@@ -58,18 +59,20 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              onClick={() => openWhatsApp('Olá! Gostaria de descobrir meu Mapa Ascensional com o UCCAI.')}
             >
               <Sparkles className="w-5 h-5 mr-2" />
               Descubra Seu Mapa Ascensional
             </Button>
             
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               size="lg"
               className="border-2 border-purple-300 text-purple-700 hover:bg-purple-50 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105"
+              onClick={() => openWhatsApp('Olá! Gostaria de conhecer os serviços do UCCAI.')}
             >
               Conheça Nossos Serviços
             </Button>
